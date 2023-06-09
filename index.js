@@ -85,7 +85,7 @@ const sendReply = async (gmail, to, messsageReference, subject, threadId) => {
     `References: ${messsageReference}`,
     `In-Reply-To: ${messsageReference}`,
     `Subject:${subject} `,
-    "From: uditjhinger@gmail.com",
+    "From: example@gmail.com",
     `To: ${to}`,
     "Content-Type: text/html; charset=utf-8",
     "MIME-Version: 1.0",
@@ -141,7 +141,7 @@ async function checkUnreadAndReply() {
   // Geting list of messages with filters
   let res = await gmail.users.messages.list({
     userId: "me",
-    q: "in:inbox is:unread from:uditjhinger9@gmail.com",
+    q: "in:inbox is:unread from:abcxyz@gmail.com",
   });
 
   // Check if there are result
